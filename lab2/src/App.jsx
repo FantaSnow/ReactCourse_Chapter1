@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import ToDoTable from "./components/ToDoTable";
-import AddToDOComponent from "./components/AddToDOComponent";
+import AddToDOComponent from "./components/AddToDoComponent";
 import SearchInput from "./components/SearchInput";
 
 function App() {
