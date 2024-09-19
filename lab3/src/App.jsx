@@ -11,14 +11,17 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("");
 
   function handleNewTitleChange(event) {
-    setNewToDo({ id: Math.random(), title: event.target.value });
+    setNewToDo({ ...newToDo, title: event.target.value });
   }
 
   function handleSubmit(event) {
     event.preventDefault();
     if (newToDo.title.trim()) {
-      setToDos([...toDos, newToDo]);
+      const newTodoWithId = { id: Date.now(), ...newToDo };
+      setToDos([...toDos, newTodoWithId]);
       setNewToDo({ title: "" });
+    } else {
+      alert("ToDo title cannot be empty.");
     }
   }
 

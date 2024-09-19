@@ -12,11 +12,11 @@ const ToDoTable = ({ toDos, onDelete }) => {
       </thead>
       <tbody>
         {toDos.map((toDo) => (
-          <tr key={toDo.id.toString()}>
-            <td>{toDo.id.toString()}</td>
+          <tr key={toDo.id}>
+            <td>{toDo.id}</td>
             <td>{toDo.title}</td>
             <td>
-              <button onClick={() => onDelete(toDo.id)}>Delete</button>{" "}
+              <button onClick={() => onDelete(toDo.id)}>Delete</button>
             </td>
           </tr>
         ))}
