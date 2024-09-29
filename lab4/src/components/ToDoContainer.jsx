@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import ToDoTable from "./ToDoTable";
-import AddToDoComponent from "./AddToDoComponent";
-import SearchInput from "./SearchInput";
-import useGetAllToDo from "./useToDos";
+import React, { useState } from 'react';
+import ToDoTable from './ToDoTable';
+import AddToDoComponent from './AddToDoComponent';
+import SearchInput from './SearchInput';
+import useGetAllToDo from '../Hooks/useToDos';
 
 const ToDoContainer = () => {
   const { isLoading, data: toDos, setData: setToDos } = useGetAllToDo(); // Destructure from the hook
-  const [newToDo, setNewToDo] = useState({ title: "" });
-  const [searchTerm, setSearchTerm] = useState("");
+  const [newToDo, setNewToDo] = useState({ title: '' });
+  const [searchTerm, setSearchTerm] = useState('');
 
   function handleNewTitleChange(event) {
     setNewToDo({ ...newToDo, title: event.target.value });
@@ -18,9 +18,9 @@ const ToDoContainer = () => {
     if (newToDo.title.trim()) {
       const newTodoWithId = { id: Date.now(), ...newToDo };
       setToDos([...toDos, newTodoWithId]);
-      setNewToDo({ title: "" });
+      setNewToDo({ title: '' });
     } else {
-      alert("ToDo title cannot be empty.");
+      alert('ToDo title cannot be empty.');
     }
   }
 
