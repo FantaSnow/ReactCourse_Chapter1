@@ -1,6 +1,6 @@
-import React from "react";
-import PageTitle from "./components/PageTitle";
-import ToDoContainer from "./components/ToDoContainer";
+import React from 'react';
+import PageTitle from './components/PageTitle';
+import ToDoContainer from './components/ToDoContainer';
 
 function App() {
   return (
@@ -12,4 +12,3 @@ function App() {
 }
 
 export default App;
-

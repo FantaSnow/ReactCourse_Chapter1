@@ -14,7 +14,7 @@ const useGetAllToDo = () => {
         .then((json) => {
           setData(json);
           setIsLoading(false);
-        });
+        }); 
     };
     fetchData();
   }, []);

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import ToDoTable from "./components/ToDoTable";
-import AddToDOComponent from "./components/AddToDoComponent";
+import AddToDoComponent from "./components/AddToDoComponent";
 import SearchInput from "./components/SearchInput";
 
 function App() {
@@ -36,7 +36,7 @@ function App() {
 
   return (
     <div>
-      <AddToDOComponent
+      <AddToDoComponent
         title={newToDo.title}
         onTitleChange={handleNewTitleChange}
         onSubmit={handleSubmit}
