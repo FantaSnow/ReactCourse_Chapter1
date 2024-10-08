@@ -5,7 +5,7 @@ import SearchInput from './SearchInput';
 import useGetAllToDo from '../Hooks/useToDos';
 
 const ToDoContainer = () => {
-  const { isLoading, data: toDos, setData: setToDos } = useGetAllToDo(); // Destructure from the hook
+  const { isLoading, data: toDos, setData: setToDos } = useGetAllToDo();
   const [newToDo, setNewToDo] = useState({ title: '' });
   const [searchTerm, setSearchTerm] = useState('');
 
